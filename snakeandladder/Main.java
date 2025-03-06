@@ -39,7 +39,7 @@ public class Main {
         // System.out.println(entity.getPlayers());
 
         PlaySnakeAndLadder PlaySnakeAndLadderObj = new PlaySnakeAndLadder(6);
-        System.out.println(PlaySnakeAndLadderObj.playGame());
+        System.out.println(PlaySnakeAndLadderObj.playGame() + " wins the game!");
         input.close();
     }
 
