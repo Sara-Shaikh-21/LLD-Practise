@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
-        Entities entity = new Entities();
+        Entities entity = Entities.getInstance();
 
         System.out.println("Enter total number of snakes:");
         int noOfSnakes = input.nextInt();
@@ -30,13 +30,17 @@ public class Main {
             destination = input.nextInt();
             entity.setLadder(source, destination);
         }
-        System.out.println("Enter player's name: ");
-        String p1 = input.next();
-        String p2 = input.next();
+        String p1, p2;
+        System.out.println("Enter player 1 name: ");
+        p1 = input.next();
+        System.out.println("Enter player 2 name: ");
+        p2 = input.next();
         entity.setPlayers(p1, p2);
+        // System.out.println(entity.getPlayers());
 
-        PlaySnakeAndLadder PlaySnakeAndLadderObj=new PlaySnakeAndLadder(6);
-
+        PlaySnakeAndLadder PlaySnakeAndLadderObj = new PlaySnakeAndLadder(6);
+        System.out.println(PlaySnakeAndLadderObj.playGame());
+        input.close();
     }
 
 }
